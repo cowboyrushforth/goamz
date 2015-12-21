@@ -53,9 +53,9 @@ type Owner struct {
 }
 
 var attempts = aws.AttemptStrategy{
-	Min:   5,
-	Total: 5 * time.Second,
-	Delay: 200 * time.Millisecond,
+	Min:   10,
+	Total: 60 * time.Second,
+	Delay: 1200 * time.Millisecond,
 }
 
 // New creates a new S3.
